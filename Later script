@@ -1,0 +1,17 @@
+local minimumAge = 60
+game.Players.PlayerAdded:Connect(function(player)
+	
+end)
+game.Players.PlayerAdded:Connect(function(player)
+	if player.AccountAge < minimumAge then
+
+	end
+end)
+local minimumAge = nill
+local kickMessage = "このゲームをプレイするにはアカウント登録日数が "..minimumAge.." 日以上経過していることが条件です"
+
+game.Players.PlayerAdded:Connect(function(player)
+	if player.AccountAge < minimumAge then
+		player:Kick(kickMessage)
+	end
+end)
